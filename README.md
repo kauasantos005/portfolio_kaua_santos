@@ -48,6 +48,7 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
 | **QrProcura Google AI Studio** | Proejto para identificar imagens e fazer uma QRcode para elas. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/c5953c075b9f3786e330c97c82c12981b8fc9f68/qr-procura) |
+| **CorridaDePrompt** | Quatro prompts competem pela melhor imagem de astronauta barroco em Marte tocando violoncelo. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/e7c6586e33f3b39c3aabb213b571660fd179ee37/CorridaPrompt) |
 
 ### 🏗 Estrutura do Repositório
 
