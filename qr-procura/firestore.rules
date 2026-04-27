@@ -1,0 +1,94 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: /users/{userId}
+    // Document ID: userId (string)
+    // Fields:
+    //   - uid: string (required) - The unique ID of the user.
+    //   - email: string (required) - The user's email address.
+    //   - lastOptions: map (optional) - The last used QR code options.
+    //   - updatedAt: timestamp (optional) - The last time the profile was updated.
+    //
+    // Collection: /users/{userId}/history/{historyId}
+    // Document ID: historyId (string)
+    // Fields:
+    //   - id: string (required) - Unique ID for the history item.
+    //   - userId: string (required) - The ID of the user who created this.
+    //   - options: map (required) - The options used to generate the QR code.
+    //   - timestamp: number (required) - The time the QR code was generated.
+    //   - label: string (optional) - A label for the QR code.
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+          (request.auth.token.email == "kauassantossilvaa@gmail.com" && request.auth.token.email_verified == true));
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidUser(data) {
+      return data.uid is string && data.uid.size() > 0 && data.uid.size() < 128 &&
+             data.email is string && isValidEmail(data.email) &&
+             (!('lastOptions' in data) || data.lastOptions is map) &&
+             (!('updatedAt' in data) || data.updatedAt is timestamp);
+    }
+
+    function isValidHistoryItem(data) {
+      return data.id is string && data.id.size() > 0 && data.id.size() < 128 &&
+             data.userId is string && data.userId.size() > 0 && data.userId.size() < 128 &&
+             data.options is map &&
+             data.timestamp is number &&
+             (!('label' in data) || (data.label is string && data.label.size() < 256));
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isOwner(userId) && isValidUser(request.resource.data) && hasOnlyAllowedFields(['uid', 'email', 'lastOptions', 'updatedAt']);
+      allow update: if isOwner(userId) && isValidUser(request.resource.data) && hasOnlyAllowedFields(['uid', 'email', 'lastOptions', 'updatedAt']);
+      
+      match /history/{historyId} {
+        allow read: if isOwner(userId) || isAdmin();
+        allow create: if isOwner(userId) && isValidHistoryItem(request.resource.data) && hasOnlyAllowedFields(['id', 'userId', 'options', 'timestamp', 'label']);
+        allow update: if isOwner(userId) && isValidHistoryItem(request.resource.data) && hasOnlyAllowedFields(['id', 'userId', 'options', 'timestamp', 'label']);
+        allow delete: if isOwner(userId) || isAdmin();
+      }
+    }
+
+    // Default deny
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}
