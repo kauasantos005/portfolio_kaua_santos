@@ -40,19 +40,15 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 
 ### 📂 Portfólio de Projetos
 
-#### ⚙️ Automação & Integração de Sistemas
-
-| Projeto | Descrição | Tecnologias | Link |
-| :--- | :--- | :--- | :---: |
-| **Sistema de Atualização de Dados Fiscais — Tiny ERP** | Automação completa que lê uma planilha Excel com dados fiscais (NCM, CEST, Origem, Unidade, Peso e Dimensões) e atualiza os produtos em massa no ERP Tiny via API REST. Inclui interface gráfica em Python, dashboard web sincronizado via Google Apps Script e tratamento de erros com log detalhado. Desenvolvido em ambiente corporativo real, o sistema eliminou horas de trabalho manual de atualização cadastral. | Python · Tkinter · REST API · Google Apps Script · Excel | [Ver Projeto](#) |
-
-#### 📊 Business Intelligence & Dados
-
-| Projeto | Descrição | Tecnologias | Link |
-| :--- | :--- | :--- | :---: |
-| **Em breve** | Novos projetos de BI e análise de dados em desenvolvimento. | — | — |
-
----
+#### 🗃️ Modelagem de Banco de Dados
+| Projeto | Descrição | Link |
+| :--- | :--- | :---: |
+| **Sistema de Gestão Escolar** | Modelagem ER e Scripts SQL para uma instituição de ensino. | [Ver Projeto](./projeto-banco-dados/) |
+ 
+#### 🤖 Inteligência Artificial
+| Projeto | Descrição | Link |
+| :--- | :--- | :---: |
+| **QrProcura Google AI Studio** | Proejto para identificar imagens e fazer uma QRcode para elas. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/c5953c075b9f3786e330c97c82c12981b8fc9f68/qr-procura) |
 
 ### 🏗 Estrutura do Repositório
 
