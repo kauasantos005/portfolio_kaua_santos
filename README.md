@@ -43,7 +43,7 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 #### 🤖 Inteligência Artificial
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
-| **QrProcura Google AI Studio** | Proejto para identificar imagens e fazer uma QRcode para elas. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/c5953c075b9f3786e330c97c82c12981b8fc9f68/qr-procura) |
+| **QrProcura Google AI Studio** | Projeto para identificar imagens e fazer uma QRcode para elas. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/c5953c075b9f3786e330c97c82c12981b8fc9f68/qr-procura) |
 | **CorridaDePrompt** | Quatro prompts competem pela melhor imagem de astronauta barroco em Marte tocando violoncelo. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/e7c6586e33f3b39c3aabb213b571660fd179ee37/CorridaPrompt) |
 | **Laboratório de Classificação Visual** | Experimento com Teachable Machine expõe como poucos dados de treino geram viés racial na classificação de tipos de cabelo. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/58f0f0a5d06b0e45aabde3f4b9cde33706371ece/ProjetoDeLaborat%C3%B3rioDeClassifica%C3%A7%C3%A3oVisual) |
 | **Engenharia Reversa** | Com a IA escrevendo código, o diferencial do desenvolvedor júnior passa a ser saber decompor problemas e auditar criticamente o que a máquina produz. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/6f8d867f803b8572092d1b311885983e4cec1025/ProjetoEngenhariaReversa) |
