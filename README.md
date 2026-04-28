@@ -59,5 +59,5 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 
 ### 📈 GitHub Stats
 
-![Kauã's GitHub Stats](https://github-readme-stats.vercel.app/api?username=SEU_USERNAME_GITHUB&show_icons=true&theme=dark&title_color=F97316&icon_color=F97316)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USERNAME_GITHUB&layout=compact&theme=dark&title_color=F97316)
+![Kauã's GitHub Stats](https://github-readme-stats.vercel.app/api?username=kauasantos005&show_icons=true&theme=dark&title_color=F97316&icon_color=F97316)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kauasantos005&layout=compact&theme=dark&title_color=F97316)
