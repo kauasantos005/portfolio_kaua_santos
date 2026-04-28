@@ -49,11 +49,15 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 | **Engenharia Reversa** | Com a IA escrevendo código, o diferencial do desenvolvedor júnior passa a ser saber decompor problemas e auditar criticamente o que a máquina produz. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/6f8d867f803b8572092d1b311885983e4cec1025/ProjetoEngenhariaReversa) |
 | **Engenharia de Software e IA com Bubble.io** | Usando IA e Bubble.io, o projeto constrói um sistema de gestão de orçamentos com 4 perfis de acesso, e documenta como escapar do vendor lock-in via exportação de dados pela API. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/cd08e87b9d42e7487abdbb13de4a7d3d6adbfec3/Engenharia%20de%20Software%20e%20IA%20com%20Bubble.io) |
 
+
 ### 🏗 Estrutura do Repositório
 
 - `root/` — Arquivo de apresentação principal.
-- `/fiscal-tiny-erp/` — Sistema de atualização de dados fiscais via API Tiny ERP.
-- `/bi-projetos/` — Projetos de análise de dados e dashboards.
+- `/qr-procura/` — Identificação de imagens e geração de QR Code com Google AI Studio.
+- `/CorridaPrompt/` — Corrida de prompts para geração de imagem com astronauta barroco.
+- `/ProjetoDeLaboratórioDeClassificaçãoVisual/` — Experimento de classificação de cabelo com Teachable Machine.
+- `/ProjetoEngenhariaReversa/` — Análise do papel do desenvolvedor júnior na era da IA.
+- `/Engenharia de Software e IA com Bubble.io/` — Sistema de gestão de orçamentos com controle de acesso e estratégia de saída.
 
 ---
 
