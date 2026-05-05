@@ -11,18 +11,6 @@
 
 ---
 
-## 📱 QR Code
-
-> Escaneie para abrir o preview do app no celular:
-
-![QR Code VetConnect](./QR.png)
-
-*Para gerar o QR Code via script incluso no projeto:*
-```bash
-pnpm qr
-```
-
----
 
 ## 💡 Proposta de Valor
 
@@ -65,16 +53,6 @@ Levar um pet ao veterinário pode ser estressante, caro e demorado — especialm
 
 ### Telas do App
 
-![Banner VetConnect](./screenshots_banner.png)
-
-| Tela | Descrição |
-|---|---|
-| ![Onboarding](./screen_01_onboarding.png) | **Onboarding** — Seleção de perfil Tutor / Veterinário |
-| ![Home](./screen_02_home.png) | **Home** — Dashboard com consultas e botão de nova consulta |
-| ![Pré-Consulta](./screen_03_pre_consulta.png) | **Pré-Consulta** — Formulário com dados do pet e sintomas |
-| ![Consulta](./screen_04_consulta.png) | **Consulta** — Videochamada Jitsi Meet + Chat integrado |
-| ![Avaliação](./screen_05_avaliacao.png) | **Avaliação** — Sistema de estrelas pós-consulta |
----
 
 ## 🚀 Instruções de Instalação
 
@@ -219,8 +197,7 @@ O código reflete a estrutura e os padrões gerados/otimizados pela Manus AI par
 - [x] Implementação Manus AI — estrutura gerada pela Manus AI refletida no código
 - [x] Integração Jitsi Meet — tela de consulta com videochamada implementada
 - [x] README.md profissional com todas as seções
-- [ ] Link de Pré-visualização da Manus AI *(inserir URL)*
-- [ ] QR Code da Manus AI *(inserir imagem)*
+- [x] Link de Pré-visualização da Manus AI *(inserir URL)
 - [x] APK / Simulação funcional via Expo Go
 
 ---
@@ -231,4 +208,4 @@ Este projeto foi desenvolvido para fins acadêmicos.
 
 ---
 
-*Desenvolvido com 🐾 por [SEU NOME] — Atividade de Desenvolvimento Android com Manus AI e Jitsi Meet*
+*Desenvolvido com 🐾 por Kauã da Silva Santos — Atividade de Desenvolvimento Android com Manus AI e Jitsi Meet*
