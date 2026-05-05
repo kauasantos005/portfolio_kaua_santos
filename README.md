@@ -50,7 +50,7 @@ Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na 
 #### 📱 Desenvolvimento Mobile
 | Projeto | Descrição | Tecnologias | Link |
 | :--- | :--- | :--- | :---: |
-| **VetConnect** | App Android de telemedicina veterinária com videochamada Jitsi Meet, chat integrado, formulário pré-consulta e avaliação pós-atendimento. Desenvolvido com assistência da Manus AI. | React Native · Expo · Jitsi · tRPC · Manus AI | [Ver Projeto](./VetConnect) |
+| **VetConnect** | App Android de telemedicina veterinária com videochamada Jitsi Meet, chat integrado, formulário pré-consulta e avaliação pós-atendimento. Desenvolvido com assistência da Manus AI. | React Native · Expo · Jitsi · tRPC · Manus AI | [Ver Projeto](https://github.com/kauasantos005/portfolio_kaua_santos/tree/d3b45e2dd994a7ddf3779c5f55eb82db4037dd3a/Projeto%20vetconnect-app) |
 
 #### 🤖 Inteligência Artificial
 | Projeto | Descrição | Link |
