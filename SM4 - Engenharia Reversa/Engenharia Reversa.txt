@@ -1,0 +1,8 @@
+O engenheiro de software júnior está deixando de ser um "escritor de código" para se tornar um "arquiteto de intenções". Como a IA (Gemini) já escreve a sintaxe (o código em si), o valor do profissional agora está em saber o que pedir e como conferir, duas competências:
+           Decomposição Lógica (Saber dividir o problema)
+
+           Auditoria Crítica (Saber revisar o que a IA fez)
+
+       
+
+        Pergunta dois. A linha entre aprender e plagiar com IA é tênue, hoje, usamos uma referência visual para entender a lógica (como os accordions funcionam, como as cores mudam o QR), isso é aprendizado, o plágio digital acontece quando você não busca entender a mecânica, mas apenas usa a IA para "clonar" a identidade visual e o valor de negócio de outra pessoa para lucrar em cima do esforço alheio, sem adicionar nada de novo
