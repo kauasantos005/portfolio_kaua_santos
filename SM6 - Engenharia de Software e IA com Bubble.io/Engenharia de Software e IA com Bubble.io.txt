@@ -1,0 +1,65 @@
+https://orcamanager.bubbleapps.io/version-test/?debug_mode=true
+
+
+
+Prompt Usado:
+
+
+
+Create "OrcaManager", a Budget Management System with 4 user 
+
+roles: Administrator (full access), Manager (approve/reject 
+
+budgets), Collaborator (create own budgets), Client (view 
+
+budgets created for them).
+
+
+
+DATA TABLES:
+
+- User: name, email, role, company, created_date
+
+- Client: name, email, phone, company, created_by (User)
+
+- Budget: title, description, client (Client), created_by (User),
+
+ assigned_manager (User), status, total_value, valid_until,
+
+ rejection_reason, created_date
+
+- BudgetItem: budget (Budget), description, quantity,
+
+ unit_price, total_price
+
+
+
+PAGES:
+
+1. Login/Signup with role-based redirect
+
+2. Dashboard with summary cards and recent budgets
+
+3. Budget List with filters by status, date and client
+
+4. New Budget form with dynamic item rows (auto-calculate total)
+
+5. Budget Detail with approve/reject buttons (Manager only)
+
+6. Client List (Admin and Manager only)
+
+7. Admin Panel for user role management
+
+
+
+RULES:
+
+- No table should be publicly visible
+
+- Use Option Sets for status: Pending, Under Review, Approved,
+
+ Rejected, Cancelled
+
+- Use Option Sets for roles instead of hardcoded text
+
+- All database searches must happen at the Repeating Group level
