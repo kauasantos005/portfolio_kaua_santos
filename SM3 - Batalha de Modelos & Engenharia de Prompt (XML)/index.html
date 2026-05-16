@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS — Blog & Revista Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Variables ── */
+    :root {
+      --bg:        #080810;
+      --bg2:       #0d0d1a;
+      --bg3:       #12121f;
+      --neon:      #00ffe0;
+      --neon2:     #ff00aa;
+      --neon3:     #aaff00;
+      --text:      #e8e8f0;
+      --muted:     #6b6b88;
+      --border:    rgba(0,255,224,0.12);
+      --card:      rgba(255,255,255,0.03);
+      --font-head: 'Bebas Neue', sans-serif;
+      --font-body: 'Lora', serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-disp: 'DM Serif Display', serif;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain overlay ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 180px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--neon); border-radius: 2px; }
+
+    /* ── Utility ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    .neon { color: var(--neon); }
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--neon);
+      color: var(--neon);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ─────────────────────────────────────────
+       NAV
+    ───────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(8,8,16,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span { color: var(--neon); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 1px; background: var(--neon);
+      transform: scaleX(0); transition: transform 0.2s;
+    }
+    .nav-links a:hover { color: var(--neon); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-toggle span {
+      display: block; width: 22px; height: 2px;
+      background: var(--text); margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    /* ─────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────── */
+    #inicio {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,255,224,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(255,0,170,0.05) 0%, transparent 60%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--neon);
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 32px; height: 1px; background: var(--neon);
+    }
+    .hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(3.5rem, 7vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      margin-bottom: 28px;
+    }
+    .hero-title .accent { color: var(--neon); }
+    .hero-title .italic {
+      font-family: var(--font-disp);
+      font-style: italic;
+      font-size: 0.85em;
+      color: var(--muted);
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 460px;
+      margin-bottom: 40px;
+      line-height: 1.75;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--neon);
+      color: var(--bg);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 28px;
+      transition: box-shadow 0.3s, transform 0.2s;
+    }
+    .hero-cta:hover {
+      box-shadow: 0 0 32px rgba(0,255,224,0.4);
+      transform: translateY(-2px);
+    }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-card-stack {
+      position: relative;
+      height: 400px;
+    }
+    .hero-card {
+      position: absolute;
+      border: 1px solid var(--border);
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      padding: 24px;
+      border-radius: 2px;
+    }
+    .hero-card:nth-child(1) { width: 280px; top: 0; right: 0; animation: float1 6s ease-in-out infinite; }
+    .hero-card:nth-child(2) { width: 240px; top: 120px; right: 60px; animation: float2 8s ease-in-out infinite; border-color: rgba(255,0,170,0.2); }
+    .hero-card:nth-child(3) { width: 200px; top: 230px; right: 20px; animation: float3 7s ease-in-out infinite; border-color: rgba(170,255,0,0.15); }
+    .hc-tag { font-family: var(--font-mono); font-size: 10px; color: var(--neon); letter-spacing: 0.1em; margin-bottom: 10px; }
+    .hc-title { font-family: var(--font-head); font-size: 1.1rem; letter-spacing: 0.04em; margin-bottom: 6px; }
+    .hc-meta { font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
+
+    @keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
+    @keyframes float3 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+    /* ─────────────────────────────────────────
+       SOBRE
+    ───────────────────────────────────────── */
+    #sobre {
+      padding: 120px 0;
+      border-top: 1px solid var(--border);
+    }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .sobre-sidebar { position: sticky; top: 88px; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--neon);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 20px; height: 1px; background: var(--neon);
+    }
+    .section-number {
+      font-family: var(--font-head);
+      font-size: 8rem;
+      line-height: 1;
+      color: rgba(0,255,224,0.06);
+      letter-spacing: -0.02em;
+    }
+    .sobre-title {
+      font-family: var(--font-head);
+      font-size: 3rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+    .sobre-text { color: var(--muted); margin-bottom: 20px; }
+    .sobre-text strong { color: var(--text); }
+    .sobre-text em { color: var(--neon); font-style: normal; font-family: var(--font-mono); font-size: 0.85em; }
+    .sobre-manifesto {
+      border-left: 2px solid var(--neon);
+      padding-left: 20px;
+      margin: 32px 0;
+      font-family: var(--font-disp);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .sobre-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      margin-top: 48px;
+    }
+    .stat {
+      border: 1px solid var(--border);
+      padding: 20px;
+      text-align: center;
+      background: var(--card);
+    }
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 2.4rem;
+      color: var(--neon);
+      letter-spacing: 0.04em;
+    }
+    .stat-label { font-family: var(--font-mono); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+    /* ─────────────────────────────────────────
+       GALERIA / PORTFÓLIO (artigos)
+    ───────────────────────────────────────── */
+    #galeria {
+      padding: 120px 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+    .galeria-header {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 64px;
+    }
+    .galeria-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .galeria-title span { color: var(--neon); }
+    .see-all {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--neon);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+      padding-bottom: 2px;
+    }
+    .see-all:hover { border-color: var(--neon); }
+
+    .artigos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* featured card spans 2 cols */
+    .artigo-card { position: relative; }
+    .artigo-card.featured {
+      grid-column: span 2;
+    }
+
+    .artigo-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .artigo-card.featured .artigo-thumb { aspect-ratio: 21/9; }
+
+    .thumb-inner {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head);
+      font-size: 4rem;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.04);
+      position: relative;
+      transition: transform 0.5s;
+    }
+    .artigo-card:hover .thumb-inner { transform: scale(1.04); }
+
+    /* unique thumb backgrounds */
+    .artigo-card:nth-child(1) .thumb-inner { background: linear-gradient(135deg, #0a0a1f 0%, #001a33 100%); color: rgba(0,255,224,0.1); }
+    .artigo-card:nth-child(2) .thumb-inner { background: linear-gradient(135deg, #1a000d 0%, #0a0010 100%); color: rgba(255,0,170,0.1); }
+    .artigo-card:nth-child(3) .thumb-inner { background: linear-gradient(135deg, #0a1a00 0%, #001000 100%); color: rgba(170,255,0,0.1); }
+    .artigo-card:nth-child(4) .thumb-inner { background: linear-gradient(135deg, #1a0a00 0%, #0d0500 100%); color: rgba(255,128,0,0.1); }
+    .artigo-card:nth-child(5) .thumb-inner { background: linear-gradient(135deg, #001a1a 0%, #000d0d 100%); color: rgba(0,200,255,0.1); }
+    .artigo-card:nth-child(6) .thumb-inner { background: linear-gradient(135deg, #0d001a 0%, #08000f 100%); color: rgba(200,0,255,0.1); }
+
+    .thumb-accent {
+      position: absolute;
+      width: 60%;
+      height: 1px;
+      bottom: 30%;
+      left: 20%;
+      background: currentColor;
+      opacity: 0.3;
+    }
+    .thumb-circle {
+      position: absolute;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      border: 1px solid currentColor;
+      opacity: 0.1;
+      right: 24px; bottom: 24px;
+    }
+
+    .artigo-meta {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 10px;
+    }
+    .artigo-cat {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--neon);
+    }
+    .artigo-card:nth-child(2) .artigo-cat { color: var(--neon2); }
+    .artigo-card:nth-child(3) .artigo-cat { color: var(--neon3); }
+    .artigo-date { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+    .artigo-sep { width: 1px; height: 10px; background: var(--border); }
+
+    .artigo-titulo {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .artigo-card.featured .artigo-titulo { font-size: 2rem; }
+    .artigo-card:hover .artigo-titulo { color: var(--neon); }
+
+    .artigo-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .artigo-author {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+    .artigo-author span { color: var(--text); }
+
+    /* ─────────────────────────────────────────
+       CONTATO
+    ───────────────────────────────────────── */
+    #contato {
+      padding: 120px 0;
+      border-top: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .contato-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 50% 100%, rgba(0,255,224,0.04) 0%, transparent 70%);
+    }
+    .contato-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .contato-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--neon);
+      margin-bottom: 24px;
+    }
+    .contato-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .contato-sub {
+      color: var(--muted);
+      margin-bottom: 48px;
+      font-size: 1rem;
+    }
+    .contato-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .contato-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 24px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      transition: border-color 0.2s, color 0.2s, box-shadow 0.3s;
+      background: var(--card);
+    }
+    .contato-link:hover {
+      border-color: var(--neon);
+      color: var(--neon);
+      box-shadow: 0 0 20px rgba(0,255,224,0.1);
+    }
+    .contato-link svg { width: 16px; height: 16px; }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg2);
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      color: var(--text);
+    }
+    .footer-logo span { color: var(--neon); }
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+    .footer-info {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-align: right;
+    }
+    .footer-info a { color: var(--neon); text-decoration: none; }
+
+    /* ─────────────────────────────────────────
+       PAGE LOAD ANIMATIONS
+    ───────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.7s ease forwards;
+    }
+    .fade-up:nth-child(1) { animation-delay: 0.1s; }
+    .fade-up:nth-child(2) { animation-delay: 0.2s; }
+    .fade-up:nth-child(3) { animation-delay: 0.3s; }
+    .fade-up:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scanline cursor blink on hero */
+    .cursor {
+      display: inline-block;
+      width: 3px; height: 1em;
+      background: var(--neon);
+      vertical-align: middle;
+      margin-left: 4px;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .artigos-grid { grid-template-columns: repeat(2, 1fr); }
+      .artigo-card.featured { grid-column: span 2; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
+      .sobre-sidebar { position: static; }
+      .sobre-stats { grid-template-columns: repeat(3, 1fr); }
+      .artigos-grid { grid-template-columns: 1fr; }
+      .artigo-card.featured { grid-column: span 1; }
+      .galeria-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: rgba(8,8,16,0.98); padding: 24px; gap: 24px; border-bottom: 1px solid var(--border); }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-info { text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .sobre-stats { grid-template-columns: 1fr; }
+      .contato-links { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo">NEX<span>US</span></a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO / INÍCIO ── -->
+  <section id="inicio">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-eyebrow fade-up">Blog & Revista Digital</div>
+          <h1 class="hero-title fade-up">
+            O FUTURO<br>
+            <span class="italic">acontece</span><br>
+            <span class="accent">AGORA<span class="cursor"></span></span>
+          </h1>
+          <p class="hero-desc fade-up">
+            Tecnologia, cultura digital e pensamento crítico para quem constrói o amanhã. Conteúdo sem ruído — só o que importa.
+          </p>
+          <a href="#galeria" class="hero-cta fade-up">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Explorar Artigos
+          </a>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-card">
+              <div class="hc-tag">// destaque</div>
+              <div class="hc-title">IA Generativa em 2025</div>
+              <div class="hc-meta">12 min de leitura · Tecnologia</div>
+            </div>
+            <div class="hero-card">
+              <div class="hc-tag">// tendência</div>
+              <div class="hc-title">O colapso do scroll infinito</div>
+              <div class="hc-meta">8 min de leitura · UX</div>
+            </div>
+            <div class="hero-card">
+              <div class="hc-tag">// análise</div>
+              <div class="hc-title">Criptografia pós-quântica</div>
+              <div class="hc-meta">6 min de leitura · Segurança</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ── -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-sidebar">
+          <div class="section-label">Sobre</div>
+          <div class="section-number">02</div>
+        </div>
+        <div>
+          <h2 class="sobre-title">QUEM<br>SOMOS NÓS</h2>
+          <p class="sobre-text">
+            <strong>NEXUS</strong> nasceu da insatisfação com o jornalismo tecnológico superficial. Aqui, cada artigo é uma <em>investigação</em> — não um press release reembalado.
+          </p>
+          <p class="sobre-text">
+            Nossa equipe reúne engenheiros, designers e escritores que recusam a mediocridade. Escrevemos sobre o que entendemos profundamente, e admitimos quando não entendemos.
+          </p>
+          <blockquote class="sobre-manifesto">
+            "Informação sem contexto é ruído. Contexto sem coragem é propaganda."
+          </blockquote>
+          <p class="sobre-text">
+            Somos independentes. Sem anunciantes ditando pauta. Sem cliques vazios. Apenas leitores que valorizam <em>clareza</em> e profundidade.
+          </p>
+          <div class="sobre-stats">
+            <div class="stat">
+              <div class="stat-num">340+</div>
+              <div class="stat-label">Artigos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">28K</div>
+              <div class="stat-label">Leitores</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">4 anos</div>
+              <div class="stat-label">No ar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALERIA ── -->
+  <section id="galeria">
+    <div class="container">
+      <div class="galeria-header">
+        <div>
+          <div class="section-label">Galeria</div>
+          <h2 class="galeria-title">ÚLTIMAS<br><span>EDIÇÕES</span></h2>
+        </div>
+        <a href="#galeria" class="see-all">Ver todos →</a>
+      </div>
+
+      <div class="artigos-grid">
+
+        <!-- Card 1 — featured -->
+        <article class="artigo-card featured">
+          <div class="artigo-thumb">
+            <div class="thumb-inner">
+              NEXUS
+              <div class="thumb-accent"></div>
+              <div class="thumb-circle"></div>
+            </div>
+          </div>
+          <div class="artigo-meta">
+            <span class="artigo-cat">Tecnologia</span>
+            <div class="artigo-sep"></div>
+            <span class="artigo-date">14 Mai 2025</span>
+          </div>
+          <h3 class="artigo-titulo">IA Generativa e o Fim do Trabalho Criativo: Mito ou Realidade Iminente?</h3>
+          <p class="artigo-desc">Uma análise rigorosa sobre o impacto real dos modelos de linguagem no mercado criativo, separando o pânico midiático dos dados concretos de automação.</p>
+          <div class="artigo-author">Por <span>Ana Carvalho</span> · 12 min</div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="artigo-card">
+          <div class="artigo-thumb">
+            <div class="thumb-inner">
+              UX
+              <div class="thumb-accent"></div>
+              <div class="thumb-circle"></div>
+            </div>
+          </div>
+          <div class="artigo-meta">
+            <span class="artigo-cat">Design</span>
+            <div class="artigo-sep"></div>
+            <span class="artigo-date">10 Mai 2025</span>
+          </div>
+          <h3 class="artigo-titulo">O Colapso do Scroll Infinito</h3>
+          <p class="artigo-desc">Por que as grandes plataformas estão abandonando o feed interminável — e o que isso significa para o futuro da atenção digital.</p>
+          <div class="artigo-author">Por <span>Rafael Moura</span> · 8 min</div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="artigo-card">
+          <div class="artigo-thumb">
+            <div class="thumb-inner">
+              SEC
+              <div class="thumb-accent"></div>
+              <div class="thumb-circle"></div>
+            </div>
+          </div>
+          <div class="artigo-meta">
+            <span class="artigo-cat">Segurança</span>
+            <div class="artigo-sep"></div>
+            <span class="artigo-date">07 Mai 2025</span>
+          </div>
+          <h3 class="artigo-titulo">Criptografia Pós-Quântica: O Relógio Está Correndo</h3>
+          <p class="artigo-desc">Como os computadores quânticos ameaçam toda a infraestrutura de segurança atual — e o que os governos estão fazendo a respeito.</p>
+          <div class="artigo-author">Por <span>Luísa Ferreira</span> · 10 min</div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="artigo-card">
+          <div class="artigo-thumb">
+            <div class="thumb-inner">
+              WEB
+              <div class="thumb-accent"></div>
+              <div class="thumb-circle"></div>
+            </div>
+          </div>
+          <div class="artigo-meta">
+            <span class="artigo-cat">Dev</span>
+            <div class="artigo-sep"></div>
+            <span class="artigo-date">03 Mai 2025</span>
+          </div>
+          <h3 class="artigo-titulo">WebAssembly Vai Matar o JavaScript?</h3>
+          <p class="artigo-desc">O estado atual do WASM, suas limitações reais e por que a resposta é mais nuançada do que os hot-takes sugerem.</p>
+          <div class="artigo-author">Por <span>Bruno Teixeira</span> · 9 min</div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="artigo-card">
+          <div class="artigo-thumb">
+            <div class="thumb-inner">
+              OS
+              <div class="thumb-accent"></div>
+              <div class="thumb-circle"></div>
+            </div>
+          </div>
+          <div class="artigo-meta">
+            <span class="artigo-cat">Open Source</span>
+            <div class="artigo-sep"></div>
+            <span class="artigo-date">29 Abr 2025</span>
+          </div>
+          <h3 class="artigo-titulo">A Crise de Sustentabilidade do Open Source</h3>
+          <p class="artigo-desc">Quando infraestrutura crítica depende de voluntários exaustos, o que acontece quando eles param? O caso xz utils como alerta.</p>
+          <div class="artigo-author">Por <span>Camila Santos</span> · 11 min</div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="artigo-card">
+          <div class="artigo-thumb">
+            <div class="thumb-inner">
+              NET
+              <div class="thumb-accent"></div>
+              <div class="thumb-circle"></div>
+            </div>
+          </div>
+          <div class="artigo-meta">
+            <span class="artigo-cat">Cultura</span>
+            <div class="artigo-sep"></div>
+            <span class="artigo-date">24 Abr 2025</span>
+          </div>
+          <h3 class="artigo-titulo">A Balcanização da Internet e Seus Reflexos Globais</h3>
+          <p class="artigo-desc">Como China, Rússia e União Europeia constroem internetss paralelas — e o que isso significa para a ideia de uma rede global.</p>
+          <div class="artigo-author">Por <span>Diego Almeida</span> · 13 min</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ── -->
+  <section id="contato">
+    <div class="contato-bg"></div>
+    <div class="container">
+      <div class="contato-inner">
+        <div class="contato-label">// contato</div>
+        <h2 class="contato-title">FALE COM<br>A REDAÇÃO</h2>
+        <p class="contato-sub">Sugestões de pauta, parcerias editoriais ou só quer dizer olá? Estamos aqui.</p>
+        <div class="contato-links">
+          <a href="mailto:redacao@nexusmag.com.br" class="contato-link">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="1"/><path d="M1 4l7 5 7-5"/></svg>
+            redacao@nexusmag.com.br
+          </a>
+          <a href="https://linkedin.com/company/nexusmag" class="contato-link" target="_blank">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            /company/nexusmag
+          </a>
+          <a href="https://github.com/nexusmag-br" class="contato-link" target="_blank">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            /nexusmag-br
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">NEX<span>US</span></div>
+      <div class="footer-copy">© 2025 NEXUS Magazine. Todos os direitos reservados.</div>
+      <div class="footer-info">
+        <div>redacao@nexusmag.com.br</div>
+        <div><a href="#">linkedin.com/company/nexusmag</a> · <a href="#">github.com/nexusmag-br</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Estimated Tokens ── -->
+  <!--
+    MÉTRICA OBRIGATÓRIA:
+    Estimativa de tokens gerados para este código: ~3.200 tokens
+    (contagem aproximada do HTML + CSS + JS inline)
+  -->
+
+</body>
+</html>
