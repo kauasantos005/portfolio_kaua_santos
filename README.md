@@ -1,96 +1,92 @@
 # Kauã da Silva Santos
 > Estudante de Análise e Desenvolvimento de Sistemas — UNICID
-
+ 
 ---
-
+ 
 ### 📫 Contato & Redes Sociais
+ 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/kaua-santos-730109321)
 [![E-mail](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kauasantoscontact@gmail.com)
 [![Currículo](https://img.shields.io/badge/Currículo-000000?style=for-the-badge&logo=read-the-docs&logoColor=white)](https://drive.google.com/file/d/1oPN34ZxAGLsfpxBKtrHxif5xwSsMrZi9/view?usp=sharing)
-
+ 
 ---
-
+ 
 ### 👨‍💻 Sobre
-Atualmente cursando o 2º período de Análise e Desenvolvimento de Sistemas na Universidade Cidade de São Paulo (UNICID). Apaixonado por resolver problemas reais através da tecnologia, com foco em **Automação de Processos**, **Análise de Dados / Business Intelligence** e **Desenvolvimento Mobile com IA**.
-
-* **Habilidades Técnicas:** Python, Google Apps Script, REST APIs, Excel/Google Sheets, SQL, React Native, Expo.
-* **Habilidades Socioemocionais:** Resolução de problemas, proatividade, comunicação assertiva e pensamento analítico.
-* **Foco:** Automação de processos operacionais, integração de sistemas via API e desenvolvimento de apps com inteligência artificial generativa.
-
+ 
+Cursando o **2º período de Análise e Desenvolvimento de Sistemas** na Universidade Cidade de São Paulo (UNICID). Atuo na interseção entre **engenharia de software**, **inteligência artificial generativa** e **automação de processos**, com entrega orientada a produto.
+ 
+Minhas competências técnicas abrangem **Python**, **Google Apps Script**, **REST APIs**, **SQL**, **React Native** e **Expo**. No domínio de dados, executo **sanitização e merge de datasets**, modelagem relacional e construção de pipelines de BI com **Excel/Google Sheets**.
+ 
+Competências socioemocionais incluem **decomposição lógica de problemas**, comunicação assertiva e **auditoria crítica de outputs gerados por IA** — habilidade central no ciclo de desenvolvimento assistido por modelos de linguagem.
+ 
+**Foco estratégico:** automação de processos operacionais via integração de sistemas por API, desenvolvimento de aplicações mobile com IA embarcada e prototipagem rápida com ferramentas No-Code/Low-Code.
+ 
 ---
-
-### 🛠 Minhas Ferramentas Favoritas
-
+ 
+### 🛠 Stack & Ferramentas
+ 
 #### 💻 Linguagens e Tecnologias
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Google Apps Script](https://img.shields.io/badge/Apps%20Script-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+ 
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-
+![Google Apps Script](https://img.shields.io/badge/Apps%20Script-4285F4?style=for-the-badge&logo=google&logoColor=white)
+ 
 #### 🗄️ Banco de Dados & BI
+ 
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Google Sheets](https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white)
 ![Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
-
+ 
 #### 🔗 Integrações & APIs
+ 
 ![REST API](https://img.shields.io/badge/REST%20API-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Jitsi Meet](https://img.shields.io/badge/Jitsi%20Meet-97979A?style=for-the-badge&logo=jitsi&logoColor=white)
-
-#### 🤖 IA & No-Code
+![tRPC](https://img.shields.io/badge/tRPC-2596BE?style=for-the-badge&logo=trpc&logoColor=white)
+ 
+#### 🤖 IA & No-Code / Low-Code
+ 
+![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Manus AI](https://img.shields.io/badge/Manus%20AI-000000?style=for-the-badge&logo=openai&logoColor=white)
-![Bubble.io](https://img.shields.io/badge/Bubble.io-1E1E1E?style=for-the-badge&logo=bubble&logoColor=white)
+![Suno AI](https://img.shields.io/badge/Suno%20AI-6B21A8?style=for-the-badge&logo=musicbrainz&logoColor=white)
 ![Teachable Machine](https://img.shields.io/badge/Teachable%20Machine-FF6F00?style=for-the-badge&logo=google&logoColor=white)
-
+![Bubble.io](https://img.shields.io/badge/Bubble.io-1E1E1E?style=for-the-badge&logo=bubble&logoColor=white)
+ 
 ---
-
+ 
 ### 📂 Portfólio de Projetos
 
-#### 📱 Desenvolvimento Mobile
-| Projeto | Descrição | Tecnologias | Link |
-| :--- | :--- | :--- | :---: |
-| **VetConnect** | App Android de telemedicina veterinária com videochamada Jitsi Meet, chat integrado, formulário pré-consulta e avaliação pós-atendimento. Desenvolvido com assistência da Manus AI. | React Native · Expo · Jitsi · tRPC · Manus AI | [Ver Projeto](https://github.com/kauasantos005/portfolio_kaua_santos/tree/d3b45e2dd994a7ddf3779c5f55eb82db4037dd3a/Projeto%20vetconnect-app) |
-
-#### 🤖 Inteligência Artificial
-| Projeto | Descrição | Link |
-| :--- | :--- | :---: |
-| **QrProcura Google AI Studio** | Projeto para identificar imagens e fazer uma QRcode para elas. | [Ver Projeto](https://github.com/kauasantos005/portfolio_kaua_santos/tree/81a3034afca6b1b7b304234532a153b79cdd8cee/ProjetoQrProcura) |
-| **ProjetoCorridaDePrompt** | Quatro prompts competem pela melhor imagem de astronauta barroco em Marte tocando violoncelo. | [Ver Projeto](https://github.com/kauasantos005/portfolio_kaua_santos/tree/8f6732405c3e618b9c8985b145139d14e39c61ab/ProjetoCorridaPrompt) |
-| **Laboratório de Classificação Visual** | Experimento com Teachable Machine expõe como poucos dados de treino geram viés racial na classificação de tipos de cabelo. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/58f0f0a5d06b0e45aabde3f4b9cde33706371ece/ProjetoDeLaborat%C3%B3rioDeClassifica%C3%A7%C3%A3oVisual) |
-| **Engenharia Reversa** | Com a IA escrevendo código, o diferencial do desenvolvedor júnior passa a ser saber decompor problemas e auditar criticamente o que a máquina produz. | [Ver Projeto](https://github.com/kauasantos005/portifolio_kaua_santos/tree/6f8d867f803b8572092d1b311885983e4cec1025/ProjetoEngenhariaReversa) |
-| **Engenharia de Software e IA com Bubble.io** | Usando IA e Bubble.io, o projeto constrói um sistema de gestão de orçamentos com 4 perfis de acesso, e documenta como escapar do vendor lock-in via exportação de dados pela API. | [Ver Projeto](https://github.com/kauasantos005/portfolio_kaua_santos/tree/4aaa23420cc2f2062306a8441626b75fc5dd4c82/ProjetoEngenhariaDeSoftwareIABubble.io) |
-
+#### 🤖 Inteligência Artificial & Engenharia de Prompt
+ 
+| # | Projeto | Descrição | Link |
+| :---: | :--- | :--- | :---: |
+| SM1 | **A Corrida do Prompt** | Engenharia de prompt aplicada à escrita criativa: definição de persona, contexto narrativo e registro estilístico para geração de carta dramática de pirata com voz e tom controlados. | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM1%20-%20A%20Corrida%20do%20Prompt) |
+| SM2 | **Laboratório de Classificação Visual** | Experimento com Teachable Machine expõe como dataset restrito (20 amostras) induz viés algorítmico na classificação de tipos de cabelo. Proposta de correção via **Human-in-the-Loop** e curadoria ativa. | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM2%20-%20Laborat%C3%B3rio%20de%20Classifica%C3%A7%C3%A3o%20Visual) |
+| SM3 | **Batalha de Modelos & Engenharia de Prompt (XML)** | O mesmo prompt estruturado em XML é submetido a 7 LLMs (ChatGPT, Gemini, DeepSeek, Qwen, Grok, Maritaca e Claude) para avaliação comparativa de fidelidade às specs, qualidade do HTML gerado e estimativa de tokens. | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM3%20-%20Batalha%20de%20Modelos%20%26%20Engenharia%20de%20Prompt%20(XML)) |
+| SM4 | **Engenharia Reversa** | Com LLMs gerando sintaxe, o diferencial do engenheiro júnior migra para **decomposição lógica de problemas** e **auditoria crítica de outputs** — e para a linha ética entre aprender e plagiar com IA. | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM4%20-%20Engenharia%20Reversa) |
+| SM5 | **Do Clone ao MVP+** | Gerador de QR Codes com personalização visual, presets temáticos, autenticação Google OAuth, histórico persistido no Firestore e geração de paletas via Gemini API. Evolução progressiva de clone para produto com IA embarcada. | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM5%20-%20Do%20Clone%20ao%20Produto%20M%C3%ADnimo%20Vi%C3%A1vel%20(MVP%2B)) |
+| SM6 | **Engenharia de Software e IA com Bubble.io** | OrcaManager: sistema de gestão de orçamentos No-Code com **RBAC em 4 níveis** (Admin, Gestor, Colaborador, Cliente), fluxo de aprovação com Option Sets e gerado a partir de um único prompt estruturado. | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM6%20-%20Engenharia%20de%20Software%20e%20IA%20com%20Bubble.io) |
+| SM7 | **VetConnect** | App Android de telemedicina veterinária com fluxo clínico completo: pré-consulta, videochamada via Jitsi Meet, chat integrado e avaliação pós-atendimento. Arquitetura full-stack com tRPC, Drizzle ORM e OAuth 2.0, gerada com Manus AI. | React Native · Expo · Jitsi · tRPC · Drizzle · Manus AI | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM7%20-%20Desenvolvimento%20de%20App%20de%20Videoconfer%C3%AAncia%20com%20Manus%20AI%20e%20Jitsi) |
+| SM8 | **Composição Musical Assistida por IA** | EP com 5 faixas de pagode inéditas: letras geradas via **RAG com Gemini Gems** (corpus de 10 letras do artista-referência) e produção de áudio completo via Suno AI — IA como co-autora criativa. | [Ver Projeto](https://github.com/kauasantos005/portfolio-kaua-da-silva-santos/tree/main/SM8%20-%20Composi%C3%A7%C3%A3o%20Musical%20Assistida%20por%20Intelig%C3%AAncia%20Artificial) |
+ 
 ---
-
+ 
 ### 🏗 Estrutura do Repositório
-
+ 
 ```
-portfolio_kaua_santos/
+portfolio-kaua-da-silva-santos/
 │
-├── README.md                          ← Apresentação principal
+├── README.md                                                 ← Apresentação principal
 │
-├── VetConnect/                        ← App de Telemedicina Veterinária (Android)
-│   ├── README.md
-│   ├── QR.png
-│   ├── screenshots_banner.png
-│   ├── screen_01_onboarding.png
-│   ├── screen_02_home.png
-│   ├── screen_03_pre_consulta.png
-│   ├── screen_04_consulta.png
-│   ├── screen_05_avaliacao.png
-│   └── [código-fonte gerado pela Manus AI]
-│
-├── ProjetoQrProcura/                  ← Identificação de imagens + QR Code (Google AI Studio)
-├── ProjetoCorridaPrompt/              ← Corrida de prompts para geração de imagem
-├── ProjetoDeLaboratórioDeClassificaçãoVisual/ ← Experimento com Teachable Machine
-├── ProjetoEngenhariaReversa/          ← Análise do papel do dev júnior na era da IA
-└── ProjetoEngenhariaDeSoftwareIABubble.io/    ← Sistema de orçamentos com Bubble.io
+├── SM1 - A Corrida do Prompt/                               ← Engenharia de prompt criativa
+├── SM2 - Laboratório de Classificação Visual/               ← ML + viés de dados + HITL
+├── SM3 - Batalha de Modelos & Eng. de Prompt (XML)/         ← Comparativo de 7 LLMs com prompt XML
+├── SM4 - Engenharia Reversa/                                ← Papel do dev júnior na era da IA
+├── SM5 - Do Clone ao Produto Mínimo Viável (MVP+)/          ← QR Code app · React · Firebase · Gemini
+├── SM6 - Engenharia de Software e IA com Bubble.io/         ← OrcaManager · RBAC · No-Code
+├── SM7 - VetConnect (Manus AI + Jitsi)/                     ← App telemedicina veterinária · full-stack
+└── SM8 - Composição Musical Assistida por IA/               ← EP pagode · RAG · Gemini Gems · Suno AI
 ```
-
+ 
 ---
-
-### 📈 GitHub Stats
-
-![Kauã's GitHub Stats](https://github-readme-stats.vercel.app/api?username=kauasantos005&show_icons=true&theme=dark&title_color=F97316&icon_color=F97316)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kauasantos005&layout=compact&theme=dark&title_color=F97316)
