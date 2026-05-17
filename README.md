@@ -63,24 +63,24 @@ Competências socioemocionais incluem **decomposição lógica de problemas**, c
  
 | # | Projeto | Descrição | Stack | Link |
 | :---: | :--- | :--- | :--- | :---: |
-| SM1 | **A Corrida do Prompt** | Engenharia de prompt aplicada à escrita criativa: definição de persona, contexto narrativo e registro estilístico para geração de carta dramática de pirata com voz e tom controlados. | `Prompt Engineering` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM1%20-%20A%20Corrida%20do%20Prompt) |
-| SM2 | **Laboratório de Classificação Visual** | Experimento com Teachable Machine expõe como dataset restrito (20 amostras) induz viés algorítmico. Proposta de correção via **Human-in-the-Loop** e curadoria ativa. | `Teachable Machine` `ML` `HITL` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM2%20-%20Laborat%C3%B3rio%20de%20Classifica%C3%A7%C3%A3o%20Visual) |
-| SM3 | **Batalha de Modelos & Engenharia de Prompt (XML)** | O mesmo prompt estruturado em XML é submetido a 7 LLMs (ChatGPT, Gemini, DeepSeek, Qwen, Grok, Maritaca e Claude) para avaliação comparativa de fidelidade, qualidade do HTML e estimativa de tokens. | `Prompt XML` `7 LLMs` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM3%20-%20Batalha%20de%20Modelos%20%26%20Engenharia%20de%20Prompt%20(XML))) |
-| SM4 | **Engenharia Reversa** | Com LLMs gerando sintaxe, o diferencial do engenheiro júnior migra para **decomposição lógica de problemas** e **auditoria crítica de outputs** — e para a linha ética entre aprender e plagiar com IA. | `LLMs` `Análise Crítica` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM4%20-%20Engenharia%20Reversa) |
-| SM8 | **Composição Musical Assistida por IA** | EP com 5 faixas de pagode inéditas: letras geradas via **RAG com Gemini Gems** (corpus de 10 letras do artista-referência) e produção de áudio completo via Suno AI. | `Gemini` `RAG` `Suno AI` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM8%20-%20Composi%C3%A7%C3%A3o%20Musical%20Assistida%20por%20Intelig%C3%AAncia%20Artificial) |
+| SM1 | **A Corrida do Prompt** | Engenharia de prompt aplicada à escrita criativa: definição de persona, contexto narrativo e registro estilístico para geração de carta dramática de pirata com voz e tom controlados. | `Prompt Engineering` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM1%20-%20A%20Corrida%20do%20Prompt) |
+| SM2 | **Laboratório de Classificação Visual** | Experimento com Teachable Machine expõe como dataset restrito (20 amostras) induz viés algorítmico. Proposta de correção via **Human-in-the-Loop** e curadoria ativa. | `Teachable Machine` `ML` `HITL` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM2%20-%20Laborat%C3%B3rio%20de%20Classifica%C3%A7%C3%A3o%20Visual) |
+| SM3 | **Batalha de Modelos & Engenharia de Prompt (XML)** | O mesmo prompt estruturado em XML é submetido a 7 LLMs (ChatGPT, Gemini, DeepSeek, Qwen, Grok, Maritaca e Claude) para avaliação comparativa de fidelidade, qualidade do HTML e estimativa de tokens. | `Prompt XML` `7 LLMs` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM3%20-%20Batalha%20de%20Modelos%20%26%20Engenharia%20de%20Prompt%20(XML)) |
+| SM4 | **Engenharia Reversa** | Com LLMs gerando sintaxe, o diferencial do engenheiro júnior migra para **decomposição lógica de problemas** e **auditoria crítica de outputs** — e para a linha ética entre aprender e plagiar com IA. | `LLMs` `Análise Crítica` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM4%20-%20Engenharia%20Reversa) |
+| SM8 | **Composição Musical Assistida por IA** | EP com 5 faixas de pagode inéditas: letras geradas via **RAG com Gemini Gems** (corpus de 10 letras do artista-referência) e produção de áudio completo via Suno AI. | `Gemini` `RAG` `Suno AI` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM8%20-%20Composi%C3%A7%C3%A3o%20Musical%20Assistida%20por%20Intelig%C3%AAncia%20Artificial) |
  
 ### 📱 Desenvolvimento de Aplicações & Full-Stack
  
 | # | Projeto | Descrição | Stack | Link |
 | :---: | :--- | :--- | :--- | :---: |
-| SM5 | **Do Clone ao MVP+** | Gerador de QR Codes com personalização visual, presets temáticos, autenticação Google OAuth, histórico persistido no Firestore e geração de paletas via Gemini API. Evolução progressiva de clone para produto com IA embarcada. | `React` `Firebase` `Gemini API` `OAuth` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM5%20-%20Do%20Clone%20ao%20Produto%20M%C3%ADnimo%20Vi%C3%A1vel%20(MVP%2B)) |
-| SM7 | **VetConnect** | App Android de telemedicina veterinária com fluxo clínico completo: pré-consulta, videochamada via Jitsi Meet, chat integrado e avaliação pós-atendimento. Arquitetura full-stack com tRPC, Drizzle ORM e OAuth 2.0, gerada com Manus AI. | `React Native` `Expo` `Jitsi` `tRPC` `Drizzle` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM7%20-%20Desenvolvimento%20de%20App%20de%20Videoconfer%C3%AAncia%20com%20Manus%20AI%20e%20Jitsi) |
+| SM5 | **Do Clone ao MVP+** | Gerador de QR Codes com personalização visual, presets temáticos, autenticação Google OAuth, histórico persistido no Firestore e geração de paletas via Gemini API. Evolução progressiva de clone para produto com IA embarcada. | `React` `Firebase` `Gemini API` `OAuth` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM5%20-%20Do%20Clone%20ao%20Produto%20M%C3%ADnimo%20Vi%C3%A1vel%20(MVP%2B)) |
+| SM7 | **VetConnect** | App Android de telemedicina veterinária com fluxo clínico completo: pré-consulta, videochamada via Jitsi Meet, chat integrado e avaliação pós-atendimento. Arquitetura full-stack com tRPC, Drizzle ORM e OAuth 2.0, gerada com Manus AI. | `React Native` `Expo` `Jitsi` `tRPC` `Drizzle` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM7%20-%20Desenvolvimento%20de%20App%20de%20Videoconfer%C3%AAncia%20com%20Manus%20AI%20e%20Jitsi) |
  
 ### ⚙️ Engenharia de Software & No-Code
  
 | # | Projeto | Descrição | Stack | Link |
 | :---: | :--- | :--- | :--- | :---: |
-| SM6 | **OrcaManager** | Sistema de gestão de orçamentos No-Code com **RBAC em 4 níveis** (Admin, Gestor, Colaborador, Cliente), fluxo de aprovação com Option Sets — gerado a partir de um único prompt estruturado. | `Bubble.io` `RBAC` `No-Code` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/3d3960a324dbccde0a623c3b0d81c54e0584ea80/SM6%20-%20Engenharia%20de%20Software%20e%20IA%20com%20Bubble.io) |
+| SM6 | **OrcaManager** | Sistema de gestão de orçamentos No-Code com **RBAC em 4 níveis** (Admin, Gestor, Colaborador, Cliente), fluxo de aprovação com Option Sets — gerado a partir de um único prompt estruturado. | `Bubble.io` `RBAC` `No-Code` | [Ver →](https://github.com/kauadasilvasantoss/portfolio-kaua-da-silva-santos/tree/main/SM6%20-%20Engenharia%20de%20Software%20e%20IA%20com%20Bubble.io) |
  
 ---
  
@@ -89,16 +89,17 @@ Competências socioemocionais incluem **decomposição lógica de problemas**, c
 ```
 portfolio-kaua-da-silva-santos/
 │
-├── README.md                                                 ← Apresentação principal
+├── README.md                                                          ← Apresentação principal
+├── CV/                                                                ← Currículo
 │
-├── SM1 - A Corrida do Prompt/                               ← Engenharia de prompt criativa
-├── SM2 - Laboratório de Classificação Visual/               ← ML + viés de dados + HITL
-├── SM3 - Batalha de Modelos & Eng. de Prompt (XML)/         ← Comparativo de 7 LLMs com prompt XML
-├── SM4 - Engenharia Reversa/                                ← Papel do dev júnior na era da IA
-├── SM5 - Do Clone ao Produto Mínimo Viável (MVP+)/          ← QR Code app · React · Firebase · Gemini
-├── SM6 - Engenharia de Software e IA com Bubble.io/         ← OrcaManager · RBAC · No-Code
-├── SM7 - VetConnect (Manus AI + Jitsi)/                     ← App telemedicina veterinária · full-stack
-└── SM8 - Composição Musical Assistida por IA/               ← EP pagode · RAG · Gemini Gems · Suno AI
+├── SM1 - A Corrida do Prompt/                                         ← Engenharia de prompt criativa
+├── SM2 - Laboratório de Classificação Visual/                         ← ML + viés de dados + HITL
+├── SM3 - Batalha de Modelos & Engenharia de Prompt (XML)/             ← Comparativo de 7 LLMs
+├── SM4 - Engenharia Reversa/                                          ← Papel do dev júnior na era da IA
+├── SM5 - Do Clone ao Produto Mínimo Viável (MVP+)/                    ← QR Code app · React · Firebase · Gemini
+├── SM6 - Engenharia de Software e IA com Bubble.io/                   ← OrcaManager · RBAC · No-Code
+├── SM7 - Desenvolvimento de App de Videoconferência com Manus AI/     ← VetConnect · full-stack
+└── SM8 - Composição Musical Assistida por Inteligência Artificial/    ← EP pagode · RAG · Gemini Gems · Suno AI
 ```
  
 ---
